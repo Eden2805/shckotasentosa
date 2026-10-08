@@ -1,0 +1,396 @@
+{
+  "heroes": {
+    "home": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "Sacred Heart Church",
+      "intro": "Disciples of the Word in\nCommunion for Mission.",
+      "description": "Welcome to our parish in Kota Sentosa, Kuching. Join us in faith, fellowship, and service.",
+      "buttonText": "View Mass Schedule",
+      "buttonHref": "#schedule"
+    },
+    "course": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "Courses & Forms",
+      "intro": "Grow in faith.\nWalk together in Christ.",
+      "description": "Find preparation courses, registration forms, and guidance for the sacraments and faith formation.",
+      "buttonText": "Explore Courses & Forms",
+      "buttonHref": "#baptism"
+    },
+    "news": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "News & Events",
+      "intro": "Life in our parish.\nFaith in our community.",
+      "description": "Read parish notices and discover the latest moments from our church community.",
+      "buttonText": "Read Latest Notices",
+      "buttonHref": "#notices"
+    },
+    "priest": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "Meet Our Priests",
+      "intro": "Called to serve.\nGuided by faith.",
+      "description": "Meet the priests serving Sacred Heart Church, Kota Sentosa.",
+      "buttonText": "Meet Our Priests",
+      "buttonHref": "#priest-directory"
+    },
+    "funeral": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "Funeral Arrangements",
+      "intro": "Compassion in sorrow.\nHope in Christ.",
+      "description": "Our parish is here to support your family with care and guidance.",
+      "buttonText": "View Funeral Guide",
+      "buttonHref": "#funeral-guide"
+    },
+    "tour": {
+      "eyebrow": "Sacred Heart Church · Kota Sentosa",
+      "title": "Take a Tour",
+      "intro": "A place of faith.\nA story in every space.",
+      "description": "Discover the spaces, architecture, and story of our parish church.",
+      "buttonText": "Explore the Church",
+      "buttonHref": "#highlights"
+    }
+  },
+  "schedule": [
+    {
+      "name": "Sacred Heart Church",
+      "location": "Kota Sentosa",
+      "groups": [
+        {
+          "title": "Weekday Masses",
+          "items": [
+            {
+              "day": "Monday",
+              "time": "8:00 AM",
+              "language": "English"
+            },
+            {
+              "day": "Tue – Fri",
+              "time": "6:30 PM",
+              "language": "English"
+            },
+            {
+              "day": "Thursday",
+              "time": "7:00 PM",
+              "language": "Holy Hour"
+            }
+          ]
+        },
+        {
+          "title": "Weekend Masses",
+          "items": [
+            {
+              "day": "Saturday Sunset",
+              "time": "6:00 PM",
+              "language": "BM"
+            },
+            {
+              "day": "Sunday",
+              "time": "7:30 AM",
+              "language": "English"
+            },
+            {
+              "day": "Sunday",
+              "time": "9:30 AM",
+              "language": "Mandarin"
+            },
+            {
+              "day": "Sunday",
+              "time": "11:30 AM",
+              "language": "BM"
+            },
+            {
+              "day": "Sunday",
+              "time": "5:30 PM",
+              "language": "English"
+            }
+          ]
+        }
+      ],
+      "footer": "Confession: 30 minutes before weekend Masses"
+    },
+    {
+      "name": "St. Mark's Church",
+      "location": "Batu Kawa (Outstation)",
+      "groups": [
+        {
+          "title": "Weekday Masses",
+          "items": [
+            {
+              "day": "Friday",
+              "time": "8:00 AM",
+              "language": "English"
+            }
+          ]
+        },
+        {
+          "title": "Weekend Masses",
+          "items": [
+            {
+              "day": "Saturday Sunset",
+              "time": "6:00 PM",
+              "language": "English"
+            },
+            {
+              "day": "Sunday",
+              "time": "7:00 AM",
+              "language": "English"
+            },
+            {
+              "day": "Sunday",
+              "time": "9:30 AM",
+              "language": "BM"
+            },
+            {
+              "day": "Sunday",
+              "time": "5:00 PM",
+              "language": "Mandarin"
+            }
+          ]
+        }
+      ],
+      "footer": "Confession: 30 minutes before weekend Masses"
+    }
+  ],
+  "notices": [
+    {
+      "month": "October",
+      "year": "2026",
+      "weeks": [
+        {
+          "number": "Week 1",
+          "dates": "3 Oct–4 Oct 2026",
+          "notices": [
+            {
+              "title": "St Mark's Church, Lucky Draw 2027",
+              "body": "St Mark's Church is organizing a lucky draw to be held on 24th January 2027 to raise funds for its ongoing extension project. There are many attractive prizes to be won, with a Perodua Bezza 1.0G (A) as the grand prize. Tickets are available at the church foyer for RM10 each, or RM100 for a booklet of ten. The deadline to return the lucky draw ticket counterfoils and money to St Mark's Catholic Church office is 17th January 2027."
+            },
+            {
+              "title": "KUCHING ARCHDIOCESE 50th ANNIVERSARY MASS AND EUCHARISTIC PROCESSION",
+              "body": "All are invited to celebrate the Kuching Archdiocese 50th Anniversary Holy Mass and Eucharistic Procession on 18th Oct 2026 at 4.00 pm at St. Joseph Cathedral."
+            },
+            {
+              "title": "CHOICE Kuching 40th Anniversary",
+              "body": "CHOICE Kuching celebrates its 40th Anniversary this year! A Thanksgiving Mass, held together with the Opening Mass of the CHOICE National Conference Malaysia 2026, will be celebrated on Friday, 23rd October 2026, 4.30 pm at St Peter’s Church, Padungan, Kuching. The 40th Anniversary Gala Dinner will be held on Saturday, 24th October 2026, 5.30 pm at Li Garden Restaurant, CityONE Megamall, Kuching. Ticket for the Gala Dinner is RM88 per person. For enquiries, please contact Irene Kuek at 016-870 982."
+            },
+            {
+              "title": "Examinations Mass at Sacred Heart Church",
+              "body": "Sacred Heart Church will be celebrating a special Mass for students sitting for school and public examinations on Friday. 9th October at 7.30 pm. Parents and teachers are also invited to come pray for our children."
+            },
+            {
+              "title": "Personalised Candle(s) for Departed Loved Ones",
+              "body": "Limited blessed candles priced at RM10 each are available for sale while stocks last. You may place your order through the link given and collect it a week before All Soul’s Day or leave it in the Church to be lighted during Mass every Friday and weekend. Payment can be made through online transfer or Pay Global (Sarawak Pay)."
+            },
+            {
+              "title": "Request For Prayers for The Departed Loved Ones in November",
+              "body": "During the month of November, when the Church prays for the faithful departed, you are invited to request prayers for deceased family members and friends. We kindly encourage you to support our parish by offering love donations along with your prayer requests. The names you provide will be inscribed in our Book of Remembrance and will be prayed for during Masses celebrated at Sacred Heart Church throughout November. Request and love offering may be made through the link given OR by completing the request form with the relevant details."
+            }
+          ]
+        },
+        {
+          "number": "Week 2",
+          "dates": "10 Oct–11 Oct 2026",
+          "notices": []
+        },
+        {
+          "number": "Week 3",
+          "dates": "17 Oct–18 Oct 2026",
+          "notices": []
+        },
+        {
+          "number": "Week 4",
+          "dates": "24 Oct–25 Oct 2026",
+          "notices": []
+        },
+        {
+          "number": "Week 5",
+          "dates": "31 Oct–1 Nov 2026",
+          "notices": []
+        }
+      ]
+    }
+  ],
+  "gallery": [
+    {
+      "image": "news/EventJune2026.jpg",
+      "caption": "Event in June 2026"
+    },
+    {
+      "image": "news/Altarser.jpg",
+      "caption": "Altar Server"
+    },
+    {
+      "image": "news/Gawai1.jpg",
+      "caption": "Selamat Hari Gawai & Hari Kaamatan 2026"
+    },
+    {
+      "image": "news/marriage1.jpg",
+      "caption": "SHC Marriage Notice"
+    },
+    {
+      "image": "news/mass1.jpg",
+      "caption": "Church Notice"
+    },
+    {
+      "image": "news/Picture3.jpg",
+      "caption": "Rev. Fr. Felix Au Sacerdotal Anniversary"
+    }
+  ],
+  "courses": [
+    {
+      "id": "baptism",
+      "title": "Infant Baptism",
+      "description": "Baptism is the first sacrament of initiation. Parents seeking baptism for their children must attend a preparation session to understand the responsibilities of raising a child in the Catholic faith.",
+      "image": "img/baptism.jpg",
+      "requirements": [
+        "Copy of Child's Birth Certificate",
+        "Parents' Church Marriage Certificate",
+        "Godparent's Confirmation Certificate"
+      ],
+      "links": [
+        {
+          "text": "Fill Up Registration Form",
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdC6ist3sI3-5l2gVrY6PVZJ3r7zRlvceXdRA1kB2tpb70zCw/closedform"
+        }
+      ]
+    },
+    {
+      "id": "marriage",
+      "title": "Holy Matrimony",
+      "description": "Couples planning to get married must register at the parish office at least six months prior to their intended wedding date and attend the Catholic Marriage Preparation Course (CMPC).",
+      "image": "img/marriage.jpg",
+      "requirements": [
+        "Pre-Nuptial Inquiry Form",
+        "Baptism Extract (issued within 6 months)",
+        "CMPC Completion Certificate"
+      ],
+      "links": [
+        {
+          "text": "Preparation Course",
+          "url": "https://bit.ly/KursusPra-Perkahwinan"
+        },
+        {
+          "text": "Convalidation Course",
+          "url": "https://bit.ly/ConvalidationCourse"
+        }
+      ]
+    },
+    {
+      "id": "rcia",
+      "title": "RCIA & Faith Formation",
+      "description": "Whether you are an adult seeking to enter the Catholic Church through RCIA or registering your child for Sunday School, our faith formation programs guide you closer to Christ.",
+      "image": "img/welcome.jpg",
+      "requirements": [
+        "RCIA: Open to non-Catholics and adult confirmands",
+        "Sunday School: Ages 7 to 16",
+        "Registration opens annually in December"
+      ],
+      "links": [
+        {
+          "text": "RCIA Application Form",
+          "url": "#"
+        },
+        {
+          "text": "Sunday School Form",
+          "url": "#"
+        }
+      ]
+    },
+    {
+      "id": "funeral",
+      "title": "Funeral Arrangements",
+      "description": "In times of loss, our parish community is here to support you. Please contact the parish office immediately to arrange funeral Masses, blessings, and cemetery protocols.",
+      "image": "img/funeral.jpg",
+      "requirements": [
+        "Death Certificate",
+        "Deceased's Baptism/Confirmation details",
+        "Booking of Parish Parlour (if required)"
+      ],
+      "links": [
+        {
+          "text": "View Funeral Guide & Forms",
+          "url": "funeral.html"
+        }
+      ]
+    }
+  ],
+  "priests": [
+    {
+      "name": "Rev. Fr. Felix Au",
+      "role": "Parish Priest",
+      "image": "priest/felixau.jpg",
+      "birth": "1972",
+      "ordination": "2004",
+      "telephone": "+6 082 – 622 835 (Ext 11)",
+      "address": "Sacred Heart Church, Lot 944, Jalan Liu Shan Bang, Kota Sentosa, 93250 Kuching"
+    },
+    {
+      "name": "Rev. Fr. Paul Hu, CDD",
+      "role": "Assistant Priest",
+      "image": "priest/paulhu.jpeg",
+      "birth": "1974",
+      "ordination": "2005",
+      "telephone": "+6 082 – 622 835 (Ext 12)",
+      "address": "Sacred Heart Church, Lot 944, Jalan Liu Shan Bang, Kota Sentosa, 93250 Kuching"
+    },
+    {
+      "name": "Rev. Fr. Aloysius Dirgahayu, CDD",
+      "role": "Assistant Priest",
+      "image": "priest/bayu.jpeg",
+      "birth": "1988",
+      "ordination": "2025",
+      "telephone": "+6 082 – 622 835 (Ext 15)",
+      "address": "Sacred Heart Church, Lot 944, Jalan Liu Shan Bang, Kota Sentosa, 93250 Kuching"
+    }
+  ],
+  "tourHighlights": [
+    {
+      "id": "exterior",
+      "category": "01 / Architecture",
+      "title": "The Church Exterior",
+      "image": "img/shc.jpg",
+      "description": "The pitched roof and prominent cross give the church its distinctive silhouette. The cross on the façade points to the faith at the centre of parish life."
+    },
+    {
+      "id": "nave",
+      "category": "02 / Gathering",
+      "title": "The Nave & Central Aisle",
+      "image": "img/church.png",
+      "description": "The nave is the main gathering space for the congregation. Rows of seating face the sanctuary, while the central aisle provides a route for liturgical processions."
+    },
+    {
+      "id": "sanctuary",
+      "category": "03 / Celebration",
+      "title": "The Sanctuary & Altar",
+      "image": "img/mass.jpg",
+      "description": "The sanctuary is the focal point of the worship space. The altar stands before a stone-faced backdrop, drawing attention to the celebration of the Eucharist."
+    },
+    {
+      "id": "sacred-details",
+      "category": "04 / Sacred details",
+      "title": "The Tabernacle & Ambo",
+      "image": "img/mass.jpg",
+      "description": "The tabernacle houses the reserved Blessed Sacrament. Beside the altar, the ambo is the place from which Scripture is proclaimed."
+    }
+  ],
+  "tourHistory": [
+    {
+      "label": "Parish beginnings · Details forthcoming",
+      "title": "The First Gathering Spaces",
+      "description": "This entry will tell the story of the parish's earliest places of worship and the community that helped establish them."
+    },
+    {
+      "label": "Construction & dedication · Details forthcoming",
+      "title": "Building a Spiritual Home",
+      "description": "The confirmed construction period, architectural story, and dedication of the church building will be recorded here."
+    },
+    {
+      "label": "Infrastructure improvements · Details forthcoming",
+      "title": "Caring for Our Church",
+      "description": "Verified renovation milestones and improvements to the church facilities will be added to this part of the timeline."
+    },
+    {
+      "label": "Our church today",
+      "title": "A Place of Worship & Community",
+      "description": "Sacred Heart Church in Kota Sentosa, Kuching, brings parishioners together for Mass, faith formation, and parish community life."
+    }
+  ]
+}

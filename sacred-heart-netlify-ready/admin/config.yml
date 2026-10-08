@@ -1,0 +1,126 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+publish_mode: editorial_workflow
+show_preview_links: false
+
+collections:
+  - name: church-content
+    label: Church Website
+    files:
+      - name: content
+        label: Website content
+        file: storage/content.json
+        fields:
+          - label: Page headers
+            name: heroes
+            widget: object
+            fields:
+              - { label: Home, name: home, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+              - { label: Courses & Forms, name: course, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+              - { label: News & Events, name: news, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+              - { label: Priests, name: priest, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+              - { label: Funeral Arrangements, name: funeral, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+              - { label: Take a Tour, name: tour, widget: object, collapsed: true, fields: [{ label: Eyebrow, name: eyebrow, widget: string }, { label: Title, name: title, widget: string }, { label: Introduction, name: intro, widget: text }, { label: Description, name: description, widget: text }, { label: Button label, name: buttonText, widget: string }, { label: Button link, name: buttonHref, widget: string }] }
+          - label: Mass schedule
+            name: schedule
+            widget: list
+            summary: "{{fields.name}} · {{fields.location}}"
+            fields:
+              - { label: Church name, name: name, widget: string }
+              - { label: Location, name: location, widget: string }
+              - label: Mass groups
+                name: groups
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Group title, name: title, widget: string }
+                  - label: Mass times
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Day, name: day, widget: string }
+                      - { label: Time, name: time, widget: string }
+                      - { label: Language or service, name: language, widget: string }
+              - { label: Footer note, name: footer, widget: string, required: false }
+          - label: Courses & Forms
+            name: courses
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Section ID, name: id, widget: string, hint: Keep existing IDs so page links continue to work. }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image }
+              - label: Requirements
+                name: requirements
+                widget: list
+                field: { label: Requirement, name: requirement, widget: string }
+              - label: Form links
+                name: links
+                widget: list
+                fields:
+                  - { label: Button label, name: text, widget: string }
+                  - { label: Link URL, name: url, widget: string }
+          - label: Church notices by month and week
+            name: notices
+            widget: list
+            summary: "{{fields.month}} {{fields.year}}"
+            fields:
+              - { label: Month, name: month, widget: string }
+              - { label: Year, name: year, widget: string }
+              - label: Weeks
+                name: weeks
+                widget: list
+                summary: "{{fields.number}} · {{fields.dates}}"
+                fields:
+                  - { label: Week label, name: number, widget: string }
+                  - { label: Date range, name: dates, widget: string }
+                  - label: Notices
+                    name: notices
+                    widget: list
+                    summary: "{{fields.title}}"
+                    fields:
+                      - { label: Notice title, name: title, widget: string }
+                      - { label: Notice text, name: body, widget: text }
+          - label: Parish gallery
+            name: gallery
+            widget: list
+            summary: "{{fields.caption}}"
+            fields:
+              - { label: Photo, name: image, widget: image }
+              - { label: Caption, name: caption, widget: string }
+          - label: Priests
+            name: priests
+            widget: list
+            summary: "{{fields.name}} · {{fields.role}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Role, name: role, widget: string }
+              - { label: Portrait, name: image, widget: image }
+              - { label: Year of birth, name: birth, widget: string, required: false }
+              - { label: Year of ordination, name: ordination, widget: string, required: false }
+              - { label: Telephone, name: telephone, widget: string }
+              - { label: Address, name: address, widget: text }
+          - label: Tour highlights
+            name: tourHighlights
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Marker ID, name: id, widget: string, hint: Keep the existing marker IDs so the 3D tour links continue to work. }
+              - { label: Category, name: category, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Photo, name: image, widget: image }
+              - { label: Description, name: description, widget: text }
+          - label: Church infrastructure history
+            name: tourHistory
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Timeline label, name: label, widget: string }
+              - { label: Milestone, name: title, widget: string }
+              - { label: Description, name: description, widget: text }

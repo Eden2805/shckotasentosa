@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Sacred Heart Church Kota Sentosa: discover the architecture, worship spaces, an interactive 3D illustration, and our infrastructure history.">
+    <title>Church Tour | Sacred Heart Church Kota Sentosa</title>
+    <link rel="icon" type="image/png" href="img/shc-logo.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="church-tour.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="church-tour-page">
+    <a class="tour-skip-link" href="#tour-content">Skip to church tour</a>
+    <header id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="img/shc-logo.png" alt="Sacred Heart Church Logo" style="height: 55px; width: auto;">
+            </a>
+            <nav aria-label="Main navigation">
+                <ul class="nav-links" id="main-nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About Us</a></li>
+                    <li><a href="church-tour.html" aria-current="page">Take a Tour</a></li>
+                    <li><a href="course.html">Courses &amp; Forms</a></li>
+                    <li><a href="news.html">News &amp; Events</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-btn" type="button" aria-label="Open navigation" aria-controls="main-nav-links" aria-expanded="false">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+
+    <main id="tour-content">
+        <section class="tour-hero parish-hero" aria-labelledby="tour-title">
+            <div class="container">
+                <p class="parish-eyebrow">Sacred Heart Church · Kota Sentosa</p>
+                <h1 id="tour-title">Church Tour</h1>
+                <p class="parish-hero-intro">A place of faith.<br>A story in every space.</p>
+                <p>Discover the architecture and sacred spaces that bring our parish together.</p>
+                <a class="btn-primary" href="#virtual-tour">Explore the 3D Tour <span aria-hidden="true">↗</span></a>
+            </div>
+        </section>
+
+        <nav class="tour-section-nav" aria-label="Church tour sections">
+            <div class="container">
+                <a href="#highlights"><span>01</span> Infrastructure Highlights</a>
+                <a href="#virtual-tour"><span>02</span> 3D Tour</a>
+                <a href="#history"><span>03</span> Infrastructure History</a>
+            </div>
+        </nav>
+
+        <section class="section" id="highlights" aria-labelledby="highlights-title">
+            <div class="container">
+                <div class="tour-section-heading">
+                    <div>
+                        <p class="tour-eyebrow">01 / Discover the spaces</p>
+                        <h2 class="section-title" id="highlights-title">Infrastructure Highlights</h2>
+                    </div>
+                    <p>Look a little closer at the details of our church, from its distinctive exterior to the heart of the celebration inside.</p>
+                </div>
+                <div class="tour-highlight-grid">
+                    <article class="tour-highlight" id="highlight-exterior">
+                        <img src="img/shc.jpg" alt="Church exterior with a pitched roof and a cross in the façade" loading="lazy" width="2048" height="1365">
+                        <div class="tour-highlight-content">
+                            <span class="tour-card-number">01 / Architecture</span>
+                            <h3>The Church Exterior</h3>
+                            <p>The pitched roof and prominent cross give the church its distinctive silhouette. The cross on the façade points to the faith at the centre of parish life.</p>
+                            <a href="#virtual-tour" class="tour-model-link" data-highlight="exterior">See in the 3D illustration <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="tour-highlight" id="highlight-nave">
+                        <img src="img/church.png" alt="Rows of seating and a central aisle facing the sanctuary during Mass" loading="lazy" width="941" height="627">
+                        <div class="tour-highlight-content">
+                            <span class="tour-card-number">02 / Gathering</span>
+                            <h3>The Nave &amp; Central Aisle</h3>
+                            <p>The nave is the main gathering space for the congregation. Rows of seating face the sanctuary, while the central aisle provides a route for liturgical processions.</p>
+                            <a href="#virtual-tour" class="tour-model-link" data-highlight="nave">See in the 3D illustration <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="tour-highlight" id="highlight-sanctuary">
+                        <img src="img/mass.jpg" alt="Altar and stone-faced sanctuary backdrop at Sacred Heart Church" loading="lazy" width="1024" height="768">
+                        <div class="tour-highlight-content">
+                            <span class="tour-card-number">03 / Celebration</span>
+                            <h3>The Sanctuary &amp; Altar</h3>
+                            <p>The sanctuary is the focal point of the worship space. The altar stands before a stone-faced backdrop, drawing the congregation’s attention to the celebration of the Eucharist.</p>
+                            <a href="#virtual-tour" class="tour-model-link" data-highlight="sanctuary">See in the 3D illustration <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                    <article class="tour-highlight" id="highlight-sacred-details">
+                        <img src="img/mass.jpg" alt="Tabernacle in the sanctuary backdrop and the ambo beside the altar" loading="lazy" width="1024" height="768">
+                        <div class="tour-highlight-content">
+                            <span class="tour-card-number">04 / Sacred details</span>
+                            <h3>The Tabernacle &amp; Ambo</h3>
+                            <p>The tabernacle, set into the sanctuary backdrop, houses the reserved Blessed Sacrament. Beside the altar, the ambo is the place from which Scripture is proclaimed.</p>
+                            <a href="#virtual-tour" class="tour-model-link" data-highlight="sacred-details">See in the 3D illustration <span aria-hidden="true">↗</span></a>
+                        </div>
+                    </article>
+                </div>
+                <p class="tour-photo-note">Photographs from the parish website collection. Decorations may vary with the liturgical season.</p>
+            </div>
+        </section>
+
+        <section class="section tour-virtual-section" id="virtual-tour" aria-labelledby="virtual-title">
+            <div class="container">
+                <div class="tour-section-heading">
+                    <div>
+                        <p class="tour-eyebrow">02 / A different perspective</p>
+                        <h2 class="section-title" id="virtual-title">Explore in 3D</h2>
+                    </div>
+                    <p>Turn the model, open the roof, and discover how the spaces connect. Select a numbered marker to learn more.</p>
+                </div>
+                <!-- A real captured tour replaces the illustration when an embed URL is configured. -->
+                <div id="captured-tour" class="tour-captured" hidden>
+                    <iframe id="captured-tour-frame" title="Sacred Heart Church captured 3D tour" loading="lazy" allow="fullscreen; xr-spatial-tracking" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                    <p><a id="captured-tour-link" target="_blank" rel="noopener noreferrer">Open the 3D tour in a new tab <span aria-hidden="true">↗</span></a></p>
+                </div>
+                <div id="illustrated-tour">
+                    <div class="tour-preview-label"><span aria-hidden="true">●</span> Interactive illustration</div>
+                    <p class="tour-model-note">This simplified 3D model explains the church spaces. It is an illustration, not a measured model or a captured walkthrough of the actual building.</p>
+                    <div class="tour-viewer">
+                        <div class="tour-viewer-toolbar" role="group" aria-label="Choose a model view">
+                            <button type="button" data-view="exterior" aria-pressed="true">Exterior</button>
+                            <button type="button" data-view="interior" aria-pressed="false">Interior cutaway</button>
+                            <span id="tour-view-label">Exterior view</span>
+                        </div>
+                        <div class="tour-stage" id="tour-stage">
+                            <canvas id="tour-canvas" tabindex="0" aria-label="Interactive 3D church illustration. Drag to rotate. Use arrow keys to rotate and tilt, plus or minus to zoom, and zero to reset." aria-describedby="tour-controls-help">Your browser cannot display the 3D illustration. Read the infrastructure highlights above to explore the church spaces.</canvas>
+                            <div class="tour-hotspots" id="tour-hotspots"></div>
+                            <div class="tour-viewer-controls" role="group" aria-label="3D model controls">
+                                <button type="button" data-action="left" aria-label="Rotate left">↶</button>
+                                <button type="button" data-action="right" aria-label="Rotate right">↷</button>
+                                <button type="button" data-action="zoom-in" aria-label="Zoom in">+</button>
+                                <button type="button" data-action="zoom-out" aria-label="Zoom out">−</button>
+                                <button type="button" data-action="reset">Reset</button>
+                            </div>
+                        </div>
+                        <div class="tour-viewer-bottom">
+                            <p id="tour-controls-help">Drag to rotate · Scroll to zoom · Arrow keys to turn and tilt</p>
+                            <span>Illustrative layout</span>
+                        </div>
+                    </div>
+                    <div class="tour-spot-details" aria-live="polite" aria-atomic="true">
+                        <span class="tour-spot-number" id="tour-spot-number">01</span>
+                        <div>
+                            <h3 id="tour-spot-title">The Church Exterior</h3>
+                            <p id="tour-spot-description">Select a numbered marker or explore the interior cutaway to discover the church spaces.</p>
+                            <a id="tour-spot-link" href="#highlight-exterior">Read the highlight <span aria-hidden="true">↑</span></a>
+                        </div>
+                    </div>
+                    <noscript><p class="tour-model-note">Enable JavaScript to use the interactive illustration. The photographs, highlights, and history are available without it.</p></noscript>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="history" aria-labelledby="history-title">
+            <div class="container tour-history-layout">
+                <div class="tour-history-intro">
+                    <p class="tour-eyebrow">03 / Remembering our journey</p>
+                    <h2 class="section-title" id="history-title">Church Infrastructure History</h2>
+                    <p>Every church building carries the memories of the community that gathers within it.</p>
+                    <p class="tour-history-notice">Our infrastructure timeline is being prepared. Construction dates, dedication details, and renovation milestones will be added once confirmed by the parish.</p>
+                    <img src="img/shc.jpg" alt="The cross on the exterior of Sacred Heart Church" loading="lazy" width="2048" height="1365">
+                </div>
+                <!-- Replace the pending entries with verified dates and descriptions from parish records. -->
+                <ol class="tour-timeline">
+                    <li>
+                        <span class="tour-timeline-label">Parish beginnings · Details forthcoming</span>
+                        <h3>The First Gathering Spaces</h3>
+                        <p>This entry will tell the story of the parish’s earliest places of worship and the community that helped establish them.</p>
+                    </li>
+                    <li>
+                        <span class="tour-timeline-label">Construction &amp; dedication · Details forthcoming</span>
+                        <h3>Building a Spiritual Home</h3>
+                        <p>The confirmed construction period, architectural story, and dedication of the church building will be recorded here.</p>
+                    </li>
+                    <li>
+                        <span class="tour-timeline-label">Infrastructure improvements · Details forthcoming</span>
+                        <h3>Caring for Our Church</h3>
+                        <p>Verified renovation milestones and improvements to the church facilities will be added to this part of the timeline.</p>
+                    </li>
+                    <li>
+                        <span class="tour-timeline-label">Our church today</span>
+                        <h3>A Place of Worship &amp; Community</h3>
+                        <p>Sacred Heart Church in Kota Sentosa, Kuching, brings parishioners together for Mass, faith formation, and parish community life.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="tour-visit">
+            <div class="container">
+                <div><p class="tour-eyebrow">Continue the journey</p><h2>Experience our church in person.</h2><p>Join us for Mass, or contact the parish office for visitor enquiries.</p></div>
+                <a class="btn-primary" href="index.html#schedule">View Mass Schedule</a>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h2>Sacred Heart</h2>
+                <p>Kota Sentosa, Kuching</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com/sacredheartparishkotasentosa" aria-label="Parish Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/601110850944" aria-label="Parish WhatsApp"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
+                </div>
+            </div>
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Lot 944, Jalan Liu Shang Bang,<br>Kota Sentosa, 93250 Kuching, Sarawak</p>
+                <p><a href="tel:+6082622835">+6 082 – 622 835</a></p>
+                <p><a href="https://wa.me/601110850944">+6011 1085 0944</a></p>
+                <p><a href="mailto:shc.kotasentosa@gmail.com">shc.kotasentosa@gmail.com</a></p>
+            </div>
+            <div class="footer-hours">
+                <h3>Parish Office Hours</h3>
+                <p><strong>Monday to Friday:</strong> 9:00 AM – 3:00 PM</p>
+                <p><strong>Saturday &amp; Sunday:</strong> Closed</p>
+                <p><em>Closed on all public holidays.</em></p>
+            </div>
+            <div class="footer-map">
+                <div class="map-container">
+                    <iframe title="Map of Sacred Heart Church Kota Sentosa" src="https://maps.google.com/maps?q=Sacred+Heart+Church,+Kota+Sentosa,+Kuching&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=&amp;output=embed" width="100%" height="100%" style="border:0;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>&copy; 2026 Sacred Heart Church Kota Sentosa. All rights reserved.</p></div>
+    </footer>
+    <script src="script.js"></script>
+    <script src="church-tour-config.js"></script>
+    <script src="church-tour.js"></script>
+    <script src="cms-public.js"></script>
+</body>
+</html>

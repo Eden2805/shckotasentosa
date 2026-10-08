@@ -1,0 +1,1940 @@
+
+/* --- CSS Variables for Logo Palette --- */
+:root {
+    --color-primary: #1B2B50; /* Dark Blue from Logo */
+    --color-accent: #832729; /* Maroon from Logo */
+    --color-accent-hover: #631B1C; /* Darker Maroon for hover states */
+    --color-bg-light: #FBFBF9; /* Soft Off-White */
+    --color-text-dark: #333333;
+    --color-text-light: #F5F5F5;
+    
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    
+    --transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Base Resets --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    /* These 3 lines forcefully prevent horizontal white-space on mobile */
+    width: 100%;
+    max-width: 100vw;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+    position: relative; /* Keeps absolute elements contained */
+}
+
+/* Ensure no images ever break out of their containers */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section {
+    padding: 6rem 0;
+}
+
+/* --- Typography --- */
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    position: relative;
+}
+
+/* --- Navigation --- */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 1.5rem 0;
+}
+
+/* --- Scrolled Navigation State --- */
+
+/* 1. Change the header background to light/white so the dark text is readable */
+header.scrolled {
+    background-color: var(--color-bg-light); /* Soft off-white background */
+    backdrop-filter: blur(10px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+/* 2. Change the navigation links to Dark Blue when scrolled */
+header.scrolled .nav-links a {
+    color: var(--color-primary); 
+}
+
+/* 3. Keep the hover effect Maroon */
+header.scrolled .nav-links a:hover {
+    color: var(--color-accent); 
+}
+
+/* 4. Update the mobile menu icon to Dark Blue when scrolled */
+header.scrolled .mobile-menu-btn {
+    color: var(--color-primary);
+}
+
+.nav-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    color: var(--color-text-light);
+}
+
+.logo-main {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.logo-sub {
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    color: var(--color-accent);
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--color-text-light);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--color-accent);
+    transition: var(--transition);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.nav-links a[aria-current="page"]::after {
+    width: 100%;
+}
+
+.nav-links a:hover {
+    color: var(--color-accent);
+}
+
+.mobile-menu-btn {
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    background: none;
+    border: 0;
+}
+
+/* --- Image Headers: Home, Courses, News, and Church Tour --- */
+.parish-hero {
+    background: linear-gradient(90deg, rgba(17, 31, 55, .94), rgba(17, 31, 55, .6) 58%, rgba(17, 31, 55, .18)), url('img/shc.jpg') center 45% / cover;
+    color: white;
+    padding: 180px 0 78px;
+}
+
+.parish-hero .parish-eyebrow {
+    color: #e8d8bb;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-size: .72rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.parish-hero h1 {
+    font-size: clamp(3rem, 6vw, 5rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.parish-hero-intro {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.7rem;
+    line-height: 1.4;
+    margin-bottom: 1.2rem;
+}
+
+.parish-hero p:not(.parish-eyebrow):not(.parish-hero-intro) {
+    max-width: 500px;
+    color: #e0e4ea;
+    font-size: .95rem;
+}
+
+.parish-hero .btn-primary {
+    margin-top: 2rem;
+}
+
+.parish-hero ~ section[id], .parish-hero ~ main section[id] {
+    scroll-margin-top: 115px;
+}
+
+.mobile-menu-btn:focus-visible, .nav-links a:focus-visible {
+    outline: 3px solid #b98c45;
+    outline-offset: 5px;
+}
+
+@media (max-width: 600px) {
+    .parish-hero { padding: 150px 0 55px; }
+    .parish-hero .container { padding: 0 1.2rem; }
+    .parish-hero-intro { font-size: 1.4rem; }
+    .parish-hero .btn-primary { padding: 1rem 1.3rem; font-size: .75rem; }
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    /* In a real project, replace this URL with a beautiful wide shot of the church interior/exterior */
+    background: url('https://images.unsplash.com/photo-1548625361-ec85d562269a?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80') center/cover no-repeat;
+    text-align: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* Gradient transitions into the Dark Blue */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.4), rgba(27, 43, 80, 0.85)); 
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--color-text-light);
+    max-width: 800px;
+    padding: 0 2rem;
+}
+
+.hero .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--color-text-light); /* Changed to white */
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.5); /* Added shadow for readability */
+    margin-bottom: 1rem;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 2.5rem;
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+}
+
+/* --- Buttons --- */
+.btn-primary, .btn-secondary {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn-primary {
+    background-color: var(--color-accent); /* Maroon background */
+    color: var(--color-text-light); /* Changed text to white instead of Dark Blue */
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-bg-light); /* Hover turns button white */
+    color: var(--color-accent); /* Hover text turns maroon */
+    transform: translateY(-3px);
+}
+
+.btn-secondary {
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    margin-top: 1.5rem;
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* --- Layout Grids --- */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+/* --- Cards (Quick Links) --- */
+.quick-links {
+    background-color: white;
+    margin-top: -5rem;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+    border-radius: 4px;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 4rem 2rem;
+}
+
+.card {
+    text-align: center;
+    padding: 2rem;
+    border-right: 1px solid #eee;
+}
+
+.card:last-child {
+    border-right: none;
+}
+
+.card .icon {
+    font-size: 2.5rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.link-text {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    color: var(--color-primary);
+    border-bottom: 1px solid var(--color-accent);
+    padding-bottom: 3px;
+    transition: var(--transition);
+}
+
+.link-text:hover {
+    color: var(--color-accent);
+}
+
+/* --- About Section --- */
+.about-image .image-placeholder {
+    width: 100%;
+    height: 500px;
+    background-color: #E5E5E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-family: var(--font-heading);
+    border-radius: 4px;
+    background: url('img/church.png') center/cover;
+}
+
+/* --- Footer --- */
+footer {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 5rem 0 2rem 0;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1.5fr 1.5fr;
+    gap: 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 3rem;
+    margin-bottom: 2rem;
+}
+
+footer h2, footer h3 {
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+    margin-bottom: 0.8rem;
+    color: #bbb;
+}
+
+footer i {
+    margin-right: 10px;
+    color: var(--color-accent);
+}
+
+.social-links a {
+    display: inline-block;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    color: white;
+    transition: var(--transition);
+    margin-top: 1rem;
+}
+
+.social-links a:hover {
+    color: var(--color-accent);
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #777;
+}
+
+/* --- Animations --- */
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .grid-3, .grid-2, .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .card {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+    }
+    .card:last-child {
+        border-bottom: none;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        /* Create a full-screen overlay */
+        position: fixed;
+        top: 75px; /* Sits just below the header */
+        left: 0;
+        width: 100%;
+        height: calc(100vh - 75px);
+        background-color: var(--color-primary); /* Dark Blue */
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        padding-top: 4rem;
+        gap: 2.5rem;
+        
+        /* Smooth Slide-in Animation */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(100%); /* Start hidden off-screen to the right */
+        transition: all 0.4s ease-in-out;
+    }
+
+    /* This class is added by JavaScript when the button is clicked */
+    .nav-links.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        color: var(--color-text-light) !important; /* Force white text for readability */
+    }
+
+    .mobile-menu-btn {
+        display: block;
+        font-size: 1.8rem;
+        cursor: pointer;
+        z-index: 1001; /* Keeps the button above the menu */
+        transition: color 0.3s ease;
+    }
+}
+
+/* --- Essential Services Section (RCIA & Funerals) --- */
+.essential-services {
+    background-color: var(--color-primary); /* Deep Charcoal */
+    padding: 5rem 0;
+    margin-top: 4rem;
+}
+
+.service-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.15); /* Changed from maroon to subtle white */
+    border-radius: 4px;
+    transition: var(--transition);
+}
+
+.service-card:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--color-text-light); /* Border brightens on hover */
+    transform: translateY(-5px);
+}
+
+.service-card .icon {
+    font-size: 2.5rem;
+    color: var(--color-text-light); /* Changed from maroon to white */
+    margin-top: 0.2rem;
+}
+
+.service-content h3 {
+    color: var(--color-text-light); /* Changed from maroon to white */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-content p {
+    color: #cccccc;
+    margin-bottom: 2.5rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+/* Elegant Outline Button */
+.btn-outline {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border: 1px solid var(--color-text-light); /* White border */
+    color: var(--color-text-light); /* White text */
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn-outline:hover {
+    background-color: var(--color-text-light); /* Fills white on hover */
+    color: var(--color-primary); /* Text turns dark blue on hover */
+}
+
+/* Responsive adjustment for the new cards */
+@media (max-width: 768px) {
+    .service-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        padding: 2rem;
+    }
+}
+
+/* --- Mass Schedule Section --- */
+.mass-schedule-section {
+    background-color: var(--color-bg-light);
+    padding-top: 4rem;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.header-spacing {
+    margin-bottom: 4rem;
+}
+
+.schedule-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+}
+
+.schedule-card {
+    background-color: #ffffff;
+    padding: 3.5rem;
+    border-top: 4px solid var(--color-accent);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.04);
+    border-radius: 0 0 4px 4px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.schedule-header h3 {
+    font-size: 2rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.location-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    font-weight: 500;
+}
+
+.schedule-group {
+    margin-bottom: 2.5rem;
+}
+
+.schedule-group h4 {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #888;
+    margin-bottom: 1.5rem;
+}
+
+.schedule-group ul li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 0;
+    border-bottom: 1px dashed #e5e5e5;
+}
+
+.schedule-group ul li:last-child {
+    border-bottom: none;
+}
+
+.day {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.time {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--color-accent-hover);
+    text-align: right;
+}
+
+.lang {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-style: normal;
+    color: #999;
+    margin-left: 5px;
+}
+
+.schedule-footer {
+    margin-top: auto; /* Pushes footer to bottom if cards are different heights */
+    padding-top: 1.5rem;
+    font-size: 0.85rem;
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    background-color: #fafafa;
+    margin: 1rem -3.5rem -3.5rem -3.5rem;
+    padding: 1.5rem;
+    border-radius: 0 0 4px 4px;
+}
+
+.schedule-footer i {
+    color: var(--color-accent);
+    margin-right: 5px;
+}
+
+/* Responsive adjustment for the schedule */
+@media (max-width: 992px) {
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
+    .schedule-card {
+        padding: 2rem;
+    }
+    .schedule-footer {
+        margin: 1rem -2rem -2rem -2rem;
+    }
+}
+
+/* --- Priest Page Styles --- */
+.priest-hero {
+    background-color: var(--color-primary);
+    padding: 10rem 0 5rem;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.priest-hero h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.accent-line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-accent);
+    margin: 2rem auto;
+}
+
+.grid-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.priest-card {
+    background: white;
+    border: 1px solid #eee;
+    transition: var(--transition);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.priest-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    border-color: var(--color-accent);
+}
+
+.priest-image {
+    height: 350px;
+    overflow: hidden;
+}
+
+.priest-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(100%); /* Elegant luxury look */
+    transition: var(--transition);
+}
+
+.priest-card:hover .priest-image img {
+    filter: grayscale(0%);
+    scale: 1.05;
+}
+
+.priest-info {
+    padding: 2rem;
+    text-align: center;
+}
+
+.priest-role {
+    display: block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--color-accent);
+    margin-bottom: 0.8rem;
+}
+
+.priest-info h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.priest-info p {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive adjustment */
+@media (max-width: 1200px) {
+    .grid-4 {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Priest Details List --- */
+.priest-details {
+    text-align: left;
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #f0f0f0;
+}
+
+.priest-details li {
+    font-size: 0.85rem;
+    color: #555;
+    margin-bottom: 0.8rem;
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+}
+
+.priest-details li:last-child {
+    margin-bottom: 0;
+}
+
+.priest-details li span {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 2px;
+}
+
+/* --- Shared Page Hero (For Priest & Course Pages) --- */
+.page-hero {
+    background-color: var(--color-primary); /* Dark Blue */
+    padding: 10rem 0 5rem;
+    text-align: center;
+    color: var(--color-text-light);
+}
+
+.page-hero .subtitle {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+}
+
+.page-hero h1 {
+    font-size: 3.5rem;
+    margin: 1rem 0;
+}
+
+.page-hero .accent-line {
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-accent); /* Maroon */
+    margin: 2rem auto;
+}
+
+/* --- Content Rows (Alternating Layout) --- */
+.content-row {
+    padding: 6rem 0;
+}
+
+.bg-alternate {
+    background-color: #ffffff; /* Gives alternating sections a slightly brighter contrast */
+}
+
+.row-image {
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+}
+
+.row-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.row-image:hover img {
+    transform: scale(1.03);
+}
+
+.row-text {
+    padding: 0 2rem;
+}
+
+.section-icon {
+    font-size: 2rem;
+    color: var(--color-accent); /* Maroon Icon */
+    margin-bottom: 1rem;
+}
+
+.row-text h2 {
+    font-size: 2.2rem;
+    color: var(--color-primary); /* Dark Blue Title */
+    margin-bottom: 1.5rem;
+}
+
+.row-text p {
+    color: #555;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+/* Checklist Styling */
+.requirement-list {
+    margin-bottom: 2.5rem;
+}
+
+.requirement-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.8rem;
+    font-size: 0.95rem;
+    color: #444;
+}
+
+.requirement-list li i {
+    color: var(--color-accent); /* Maroon checkmarks */
+    margin-right: 12px;
+    font-size: 0.9rem;
+}
+
+/* Action Buttons Container */
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* Dark Outline Button for secondary actions */
+.btn-outline-dark {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary);
+    transition: var(--transition);
+    border-radius: 2px;
+}
+
+.btn-outline-dark:hover {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+}
+
+/* Alternating Reverse Row helper */
+.row-reverse {
+    direction: rtl; /* Reverses the grid visually */
+}
+
+.row-reverse > * {
+    direction: ltr; /* Keeps text reading normally left-to-right */
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+    .row-reverse {
+        direction: ltr;
+    }
+    .row-text {
+        padding: 0;
+        margin-top: 2rem;
+    }
+    .action-buttons {
+        flex-direction: column;
+    }
+    .btn-outline-dark, .btn-primary {
+        text-align: center;
+    }
+}
+
+/* --- Elegant Dropdown (Accordion) --- */
+.elegant-dropdown {
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
+}
+
+/* Remove default browser arrows */
+.elegant-dropdown summary::-webkit-details-marker {
+    display: none;
+}
+
+.elegant-dropdown summary {
+    list-style: none;
+    padding: 1.2rem 0;
+    cursor: pointer;
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-primary); /* Dark Blue */
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.elegant-dropdown summary:hover {
+    color: var(--color-accent); /* Maroon hover */
+}
+
+/* Rotate the arrow when opened */
+.elegant-dropdown[open] summary i {
+    transform: rotate(180deg);
+}
+
+.elegant-dropdown summary i {
+    font-size: 0.9rem;
+    color: var(--color-accent);
+    transition: transform 0.4s ease;
+}
+
+.dropdown-content {
+    padding-bottom: 1.5rem;
+    animation: fadeInDown 0.4s ease-in-out;
+}
+
+.dropdown-content ul {
+    list-style: none;
+}
+
+.dropdown-content ul li {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.dropdown-content ul li strong {
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-right: 5px;
+}
+
+/* Simple animation for the dropdown content */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* --- Funeral Page Layout --- */
+.funeral-layout {
+    background-color: var(--color-bg-light);
+    padding: 6rem 0;
+}
+
+.grid-guide-form {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 4rem;
+    align-items: start; /* Allows the form to be sticky while guide scrolls */
+}
+
+/* --- Funeral Guide Typography & Tables --- */
+.funeral-guide h2 {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.funeral-guide > p {
+    color: #555;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.guide-steps h3 {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-accent); /* Maroon */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.guide-steps ul {
+    list-style: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.guide-steps li {
+    font-size: 0.95rem;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 0.8rem;
+}
+
+.guide-steps li strong {
+    color: var(--color-primary);
+}
+
+.cost-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background: white;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.cost-table td {
+    padding: 1rem;
+    border: 1px solid #eee;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.cost-table tr:nth-child(even) {
+    background-color: #fcfcfc;
+}
+
+.cost-table td:last-child {
+    font-weight: 500;
+    color: var(--color-primary);
+}
+
+.cost-table thead td {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+.cost-table tfoot td {
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+}
+
+/* --- Luxury Form Styling --- */
+.funeral-form-container {
+    position: sticky;
+    top: 120px; /* Sticks beneath the navbar when scrolling */
+}
+
+.form-card {
+    background: white;
+    padding: 3rem;
+    border-top: 4px solid var(--color-accent);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+    border-radius: 4px;
+}
+
+.form-card h3 {
+    font-size: 1.6rem;
+    color: var(--color-primary);
+    margin-bottom: 0.5rem;
+}
+
+.form-card p {
+    font-size: 0.85rem;
+    color: #777;
+    margin-bottom: 2rem;
+}
+
+.luxury-form fieldset {
+    border: none;
+    margin-bottom: 2rem;
+}
+
+.luxury-form legend {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    color: var(--color-primary);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    width: 100%;
+    border-bottom: 1px dashed #ddd;
+    padding-bottom: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.form-group input, 
+.form-group select {
+    width: 100%;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    background-color: #fcfcfc;
+    border-radius: 2px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    color: var(--color-primary);
+    transition: var(--transition);
+}
+
+.form-group input:focus, 
+.form-group select:focus {
+    outline: none;
+    border-color: var(--color-accent); /* Maroon focus ring */
+    background-color: white;
+    box-shadow: 0 0 0 3px rgba(131, 39, 41, 0.1);
+}
+
+.form-submit {
+    width: 100%;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Responsive Overrides */
+@media (max-width: 992px) {
+    .grid-guide-form {
+        grid-template-columns: 1fr;
+    }
+    .funeral-form-container {
+        position: static; /* Removes sticky on mobile */
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    .form-card {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* --- Neat Editorial News Styles --- */
+.neat-news-section {
+    background-color: var(--color-bg-light);
+    padding: 6rem 0;
+}
+
+.news-list {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: grid;
+    grid-template-columns: 0.45fr 0.55fr;
+    gap: 4rem;
+    align-items: center;
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+/* Remove the border from the very last item */
+.news-item:last-child {
+    border-bottom: none;
+}
+
+.news-item-img {
+    width: 100%;
+    aspect-ratio: 4 / 3; /* Keeps all images perfectly uniform */
+    overflow: hidden;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.news-item-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.news-item:hover .news-item-img img {
+    transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+.news-item-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.news-date {
+    color: #888;
+}
+
+.news-category {
+    color: var(--color-accent); /* Maroon */
+}
+
+.news-category::before {
+    content: "•";
+    color: #ccc;
+    margin-right: 1rem;
+}
+
+.news-item-content h2 {
+    font-size: 1.8rem;
+    color: var(--color-primary); /* Dark Blue */
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.news-item-content p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+}
+
+/* Clean text link with animated arrow */
+.btn-text {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary);
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.3s ease;
+}
+
+.btn-text i {
+    font-size: 0.9rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-text:hover {
+    color: var(--color-accent);
+}
+
+.btn-text:hover i {
+    transform: translateX(5px); /* Arrow slides right gracefully */
+}
+
+/* Responsive constraints for the neat layout */
+@media (max-width: 992px) {
+    .news-item {
+        gap: 2rem;
+    }
+    .news-item-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .news-item {
+        grid-template-columns: 1fr; /* Stacks image on top of text on mobile */
+        gap: 2rem;
+        padding: 3rem 0;
+    }
+    .news-item-img {
+        aspect-ratio: 16 / 9; /* Wider image for mobile view */
+    }
+}
+
+/* --- Notices Section --- */
+.notices-container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Month > week hierarchy for Church Notices */
+.notice-month {
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    background: #fff;
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    box-shadow: 0 8px 25px rgba(27, 43, 80, .05);
+}
+
+.notice-month > summary,
+.notice-week > summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    list-style: none;
+    cursor: pointer;
+}
+
+.notice-month > summary::-webkit-details-marker,
+.notice-week > summary::-webkit-details-marker {
+    display: none;
+}
+
+.notice-month > summary {
+    padding: 1.4rem 1.6rem;
+    color: var(--color-primary);
+    border-left: 4px solid var(--color-accent);
+}
+
+.notice-month > summary:hover,
+.notice-week > summary:hover {
+    color: var(--color-accent);
+}
+
+.notice-month-label {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+}
+
+.notice-month-year {
+    display: block;
+    margin-top: .25rem;
+    color: var(--color-accent);
+    font-size: .75rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.notice-month-meta {
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+    color: #6d7380;
+    font-size: .75rem;
+}
+
+.notice-month-meta i,
+.notice-week > summary > i {
+    color: var(--color-accent);
+    transition: transform .3s ease;
+}
+
+.notice-month[open] > summary .notice-month-meta i,
+.notice-week[open] > summary > i {
+    transform: rotate(180deg);
+}
+
+.notice-month-content {
+    padding: 0 1.6rem 1.6rem;
+    background: #f5f5f2;
+    border-top: 1px solid #eaebed;
+}
+
+.notice-week {
+    margin-top: 1rem;
+    overflow: hidden;
+    background: white;
+    border: 1px solid #e2e4e6;
+    border-radius: 5px;
+}
+
+.notice-week > summary {
+    padding: 1.05rem 1.2rem;
+    color: var(--color-primary);
+}
+
+.notice-week-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 1.08rem;
+    font-weight: 600;
+}
+
+.notice-week-dates {
+    display: block;
+    margin-top: .2rem;
+    color: #777;
+    font-size: .73rem;
+    letter-spacing: .4px;
+}
+
+.notice-week .notice-list {
+    padding: .5rem 1.2rem 1.2rem;
+    border-top: 1px solid #eef0f2;
+}
+
+.notice-empty-message {
+    padding: 1rem 1.2rem 1.2rem;
+    color: #747982;
+    border-top: 1px solid #eef0f2;
+    font-size: .85rem;
+}
+
+.notice-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 0;
+}
+
+.notice-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    background: white;
+    padding: 1.5rem 2rem;
+    border-radius: 4px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--color-accent); /* Maroon accent line */
+}
+
+.notice-date {
+    font-family: var(--font-heading);
+    color: var(--color-accent);
+    font-size: 1.2rem;
+    font-weight: 600;
+    min-width: 80px;
+    line-height: 1.2;
+    text-align: right;
+}
+
+.notice-text h4 {
+    color: var(--color-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.notice-text p {
+    color: #555;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* --- Instagram-Style Gallery --- */
+.ig-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.ig-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Forces a perfect square */
+    overflow: hidden;
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 2px;
+}
+
+.ig-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.ig-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(27, 43, 80, 0.6); /* Dark Blue tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.ig-overlay i {
+    color: white;
+    font-size: 2rem;
+    transform: scale(0.5);
+    transition: transform 0.3s ease;
+}
+
+.ig-item:hover img {
+    transform: scale(1.05); /* Slight zoom on image */
+}
+
+.ig-item:hover .ig-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.ig-item:hover .ig-overlay i {
+    transform: scale(1);
+}
+
+/* --- Modal (Image Popup) BULLETPROOF FIX --- */
+.modal {
+    display: none; /* Controlled directly by JS now */
+    position: fixed;
+    z-index: 9999; /* Forced to the very front */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 80vh;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    animation: zoomIn 0.3s ease;
+    
+    /* Absolute centering - works perfectly on all devices */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#caption {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    text-align: center;
+    width: 100%;
+}
+
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 3rem;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+}
+
+@keyframes zoomIn {
+    from { transform: translate(-50%, -50%) scale(0.8); opacity: 0; }
+    to { transform: translate(-50%, -50%) scale(1); opacity: 1; }
+}
+
+/* --- Responsive Layouts --- */
+@media (max-width: 992px) {
+    .ig-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 squares wide on tablet */
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .notice-month > summary { padding: 1.2rem; }
+    .notice-month-content { padding: 0 .75rem .75rem; }
+    .notice-month-meta { font-size: 0; }
+    .notice-month-meta i { font-size: .9rem; }
+    .notice-week .notice-list { padding: .5rem .75rem .75rem; }
+    .notice-item {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem;
+    }
+    .notice-date {
+        text-align: left;
+    }
+    .ig-grid {
+        grid-template-columns: repeat(2, 1fr); /* Stays 2 wide on mobile like IG */
+        gap: 0.5rem;
+    }
+    .close-modal {
+        top: 15px;
+        right: 25px;
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Vision & Mission Section --- */
+.vision-mission-section {
+    background-color: #ffffff; /* Clean white background */
+    border-top: 1px solid #f0f0f0;
+    padding: 6rem 0;
+}
+
+.vision-box, .mission-box {
+    padding: 1rem 0;
+}
+
+/* Elegant Vision Statement */
+.vision-box .lead-text {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--color-primary); /* Dark Blue */
+    line-height: 1.5;
+    font-style: italic;
+    border-left: 4px solid var(--color-accent); /* Maroon line */
+    padding-left: 1.5rem;
+    margin-top: 2rem;
+}
+
+/* Structured Mission List */
+.mission-list {
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.mission-list li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.mission-list li:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.mission-list li strong {
+    color: var(--color-accent); /* Maroon */
+    font-family: var(--font-heading);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.mission-list li span {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Responsive adjustment for Mobile */
+@media (max-width: 992px) {
+    .vision-box .lead-text {
+        font-size: 1.6rem;
+    }
+    .vision-mission-section {
+        padding: 4rem 0;
+    }
+    .mission-list {
+        margin-top: 1rem;
+    }
+}
+
+/* --- Mass Etiquette Section --- */
+.etiquette-section {
+    padding: 6rem 0;
+}
+
+.etiquette-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.etiquette-card {
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.etiquette-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.etiquette-img {
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+}
+
+.etiquette-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.etiquette-content {
+    padding: 3rem 2rem 2.5rem; /* Increased top padding so the icon fits perfectly */
+    position: relative;
+}
+
+.etiquette-icon {
+    position: absolute;
+    top: -25px;
+    left: 50%; 
+    transform: translateX(-50%); /* Centers the maroon circle on the card */
+    background: var(--color-accent);
+    color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(131, 39, 41, 0.3);
+    
+    /* --- Perfect Inner Centering --- */
+    display: flex;
+    align-items: center;       /* Centers the icon vertically */
+    justify-content: center;   /* Centers the icon horizontally */
+    margin: 0;
+    padding: 0;
+}
+
+.etiquette-content h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+    text-align: center; /* Centers the headings below the icon */
+}
+
+.etiquette-list {
+    list-style: none;
+    text-align: left; /* Keeps the list easy to read */
+}
+
+.etiquette-list li {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.2rem; /* Slightly more breathing room */
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+.etiquette-list li i {
+    margin-top: 4px;
+    margin-right: 12px;
+    font-size: 1.1rem;
+    flex-shrink: 0; /* Prevents the icon from squishing into an oval */
+}
+
+.etiquette-list li span {
+    display: block;
+}
+
+.etiquette-list li strong {
+    color: var(--color-primary);
+    margin-right: 4px;
+}
+
+/* Status Colors for Do's and Don'ts */
+.text-success {
+    color: #2e7d32 !important; /* Green */
+}
+
+.text-danger {
+    color: #c62828 !important; /* Red */
+}
+
+/* Responsive constraints */
+@media (max-width: 992px) {
+    .etiquette-grid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* Shared navigation spacing for the Church Tour module. */
+@media (min-width: 993px) {
+    .nav-links { gap: 1.5rem; }
+    .nav-links a { font-size: .82rem; letter-spacing: 1px; }
+}
+@media (max-width: 992px) {
+    .nav-links { overflow-y: auto; padding-bottom: 2rem; }
+}

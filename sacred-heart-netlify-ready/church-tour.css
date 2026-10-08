@@ -1,0 +1,99 @@
+/* Church Tour: styles scoped to this module; shared palette comes from styles.css. */
+.church-tour-page { --tour-muted: #606775; --tour-border: #e0e3e6; }
+.church-tour-page button { font: inherit; cursor: pointer; }
+.church-tour-page [hidden] { display: none !important; }
+.church-tour-page .mobile-menu-btn { background: none; border: 0; }
+.church-tour-page :focus-visible { outline: 3px solid #b98c45; outline-offset: 5px; }
+.church-tour-page section[id], .tour-highlight { scroll-margin-top: 115px; }
+.tour-skip-link { position: fixed; top: -100px; left: 20px; z-index: 2000; background: white; padding: 12px 20px; }
+.tour-skip-link:focus { top: 12px; }
+.tour-eyebrow { text-transform: uppercase; letter-spacing: 2.5px; font-size: .72rem; font-weight: 600; color: var(--color-accent); margin-bottom: 1rem; }
+.tour-section-nav { border-bottom: 1px solid var(--tour-border); background: white; }
+.tour-section-nav .container { display: flex; justify-content: space-between; gap: 1rem; }
+.tour-section-nav a { padding: 1.5rem 0; color: var(--color-primary); font-size: .8rem; }
+.tour-section-nav a:hover { color: var(--color-accent); }
+.tour-section-nav span { margin-right: .7rem; color: var(--color-accent); font-size: .7rem; }
+.tour-section-heading { display: grid; grid-template-columns: 1.15fr 1fr; align-items: center; gap: 4rem; margin-bottom: 2.5rem; }
+.tour-section-heading .section-title { margin-bottom: 0; }
+.tour-section-heading > p { color: var(--tour-muted); font-size: .95rem; }
+.tour-highlight-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem; }
+.tour-highlight { background: white; border: 1px solid var(--tour-border); border-radius: 6px; overflow: hidden; }
+.tour-highlight > img { height: 250px; width: 100%; object-fit: cover; }
+.tour-highlight-content { padding: 1.8rem; }
+.tour-card-number { font-size: .68rem; text-transform: uppercase; letter-spacing: 1.5px; color: var(--color-accent); }
+.tour-highlight h3 { color: var(--color-primary); font-size: 1.65rem; margin: .6rem 0 .8rem; }
+.tour-highlight p { color: var(--tour-muted); font-size: .9rem; line-height: 1.8; }
+.tour-model-link, .tour-spot-details a { display: inline-block; font-size: .8rem; color: var(--color-accent); margin-top: 1.2rem; border-bottom: 1px solid #d5babb; padding-bottom: .2rem; }
+.tour-photo-note { font-size: .75rem; color: var(--tour-muted); margin-top: 1.2rem; }
+.tour-virtual-section { background: #f0f2f5; }
+.tour-preview-label { font-size: .75rem; color: var(--color-primary); font-weight: 600; margin-bottom: .5rem; }
+.tour-preview-label span { color: var(--color-accent); margin-right: .4rem; }
+.tour-model-note { color: var(--tour-muted); font-size: .82rem; max-width: 850px; margin-bottom: 1.5rem; }
+.tour-viewer { border: 1px solid #d9dfe6; border-radius: 8px; overflow: hidden; background: white; }
+.tour-viewer-toolbar { display: flex; align-items: center; flex-wrap: wrap; gap: .5rem; padding: .9rem 1.2rem; border-bottom: 1px solid var(--tour-border); }
+.tour-viewer-toolbar button { padding: .65rem 1rem; border: 1px solid var(--tour-border); border-radius: 4px; color: var(--color-primary); background: white; font-size: .8rem; }
+.tour-viewer-toolbar button[aria-pressed="true"] { background: var(--color-primary); color: white; border-color: var(--color-primary); }
+#tour-view-label { margin-left: auto; color: var(--tour-muted); font-size: .75rem; }
+.tour-stage { height: 480px; position: relative; background: radial-gradient(ellipse at 50% 35%, #fdfcf7, #e5e9eb); }
+#tour-canvas { display: block; width: 100%; height: 100%; cursor: grab; touch-action: pan-y; }
+#tour-canvas:active { cursor: grabbing; }
+.tour-hotspots { position: absolute; inset: 0; pointer-events: none; overflow: hidden; }
+.tour-hotspot { position: absolute; transform: translate(-50%, -50%); pointer-events: auto; width: 36px; height: 36px; border: 2px solid white; background: var(--color-primary); color: white; border-radius: 50%; box-shadow: 0 3px 10px #17243c40; font-size: .75rem; }
+.tour-hotspot[aria-pressed="true"] { background: var(--color-accent); }
+.tour-viewer-controls { position: absolute; bottom: 18px; left: 50%; transform: translateX(-50%); display: flex; gap: 5px; padding: 6px; border-radius: 6px; background: #ffffffee; box-shadow: 0 3px 16px #1b2b501c; }
+.tour-viewer-controls button { min-width: 40px; height: 38px; border: 1px solid #e4e6e8; border-radius: 3px; color: var(--color-primary); background: white; font-size: 1.2rem; }
+.tour-viewer-controls button[data-action="reset"] { padding: 0 12px; font-size: .75rem; }
+.tour-viewer-controls button:hover { background: #f0f2f5; }
+.tour-viewer-bottom { display: flex; justify-content: space-between; gap: 1rem; padding: .85rem 1.2rem; font-size: .7rem; color: var(--tour-muted); }
+.tour-viewer-bottom span { white-space: nowrap; }
+.tour-spot-details { display: flex; align-items: flex-start; gap: 1.2rem; margin-top: 1.3rem; padding: 1.6rem; background: white; border: 1px solid var(--tour-border); border-radius: 6px; }
+.tour-spot-number { background: #f5eeee; color: var(--color-accent); border-radius: 50%; width: 44px; height: 44px; flex-shrink: 0; display: grid; place-items: center; font-size: .8rem; }
+.tour-spot-details h3 { color: var(--color-primary); font-size: 1.45rem; }
+.tour-spot-details p { color: var(--tour-muted); font-size: .85rem; margin-top: .5rem; }
+.tour-spot-details a { margin-top: .8rem; }
+.tour-captured iframe { width: 100%; height: 600px; border: 0; border-radius: 6px; background: white; }
+.tour-captured p { margin-top: 1rem; font-size: .85rem; color: var(--color-accent); }
+.tour-history-layout { display: grid; grid-template-columns: 1fr 1.1fr; gap: 5rem; }
+.tour-history-intro > p:not(.tour-eyebrow) { color: var(--tour-muted); font-size: .9rem; margin-bottom: 1.5rem; }
+.tour-history-intro .tour-history-notice { padding: 1rem 1.2rem; border-left: 3px solid var(--color-accent); background: #f5f0ed; font-size: .82rem !important; }
+.tour-history-intro img { height: 230px; width: 100%; object-fit: cover; border-radius: 4px; }
+.tour-timeline { list-style: none; border-left: 1px solid #d7d2cc; margin: .5rem 0 0 .5rem; }
+.tour-timeline li { position: relative; padding: 0 0 2.6rem 2rem; }
+.tour-timeline li:last-child { padding-bottom: 0; }
+.tour-timeline li::before { content: ''; position: absolute; left: -6px; top: 5px; width: 11px; height: 11px; border-radius: 50%; background: var(--color-accent); box-shadow: 0 0 0 5px var(--color-bg-light); }
+.tour-timeline-label { font-size: .68rem; letter-spacing: 1px; color: var(--color-accent); }
+.tour-timeline h3 { color: var(--color-primary); font-size: 1.5rem; margin: .5rem 0; }
+.tour-timeline p { font-size: .88rem; color: var(--tour-muted); line-height: 1.8; }
+.tour-visit { background: #ece8e1; padding: 3rem 0; }
+.tour-visit .container { display: flex; justify-content: space-between; align-items: center; gap: 2rem; }
+.tour-visit h2 { font-size: 2rem; color: var(--color-primary); margin-bottom: .6rem; }
+.tour-visit p:not(.tour-eyebrow) { color: var(--tour-muted); font-size: .85rem; }
+.tour-visit .btn-primary { flex-shrink: 0; }
+
+@media (max-width: 992px) {
+    .tour-section-heading { gap: 2rem; }
+    .tour-history-layout { gap: 2.5rem; }
+    .tour-visit .container { align-items: flex-start; flex-direction: column; }
+    .church-tour-page header .nav-links { gap: 1.5rem; }
+}
+@media (max-width: 600px) {
+    .church-tour-page .container { padding: 0 1.2rem; }
+    .church-tour-page .section { padding: 3.5rem 0; }
+    .tour-section-nav .container { flex-direction: column; gap: 0; padding-top: .5rem; padding-bottom: .5rem; }
+    .tour-section-nav a { padding: .5rem 0; }
+    .tour-section-heading, .tour-highlight-grid, .tour-history-layout { grid-template-columns: 1fr; gap: 1.3rem; }
+    .tour-section-heading .section-title { font-size: 2rem; }
+    .tour-highlight > img { height: 210px; }
+    .tour-highlight-content { padding: 1.4rem; }
+    .tour-stage { height: 360px; }
+    #tour-view-label { display: none; }
+    .tour-viewer-toolbar { padding: .8rem; }
+    .tour-viewer-bottom { flex-direction: column; gap: .3rem; }
+    .tour-spot-details { padding: 1.2rem; gap: .8rem; }
+    .tour-captured iframe { height: 420px; }
+    .tour-timeline { margin-top: 1.5rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+    .church-tour-page { scroll-behavior: auto; }
+    .church-tour-page *, .church-tour-page *::before, .church-tour-page *::after { transition: none !important; animation: none !important; }
+}

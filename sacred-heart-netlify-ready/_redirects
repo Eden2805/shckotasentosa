@@ -1,0 +1,3 @@
+/admin/index.php /cms-unavailable.html 404!
+/api/* /cms-unavailable.html 404!
+/storage/admin.json /cms-unavailable.html 404!

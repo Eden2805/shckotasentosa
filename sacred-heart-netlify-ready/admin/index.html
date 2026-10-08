@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Church CMS | Sacred Heart Church</title>
+  <link rel="icon" type="image/png" href="../img/shc-logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root{--wine:#702331;--gold:#c9a96e;--ink:#27211f}*{box-sizing:border-box}body{margin:0;background:#f5f1eb;color:var(--ink);font:15px/1.5 Arial,sans-serif}.brand{height:82px;display:flex;align-items:center;gap:14px;padding:0 clamp(20px,5vw,64px);background:#fffdfa;border-bottom:1px solid #e7ded4}.brand img{width:48px;height:48px;object-fit:contain}.brand strong{font:600 21px 'Playfair Display',Georgia,serif;color:var(--wine)}.brand span{font-size:12px;color:#716861}.cms-frame{min-height:calc(100vh - 82px)}.cms-note{max-width:940px;margin:28px auto 0;padding:18px 22px;border:1px solid #e7d4bd;border-left:4px solid var(--gold);border-radius:10px;background:#fffdfa}.cms-note strong{color:var(--wine)}.cms-note p{margin:5px 0 0;color:#655a53;font-size:14px}@media(max-width:600px){.brand{height:72px}.brand img{width:40px;height:40px}.brand strong{font-size:18px}.cms-note{margin:18px 14px;padding:14px}}
+  </style>
+</head>
+<body>
+  <header class="brand"><img src="../img/shc-logo.png" alt=""><div><strong>Sacred Heart Church</strong><br><span>Kota Sentosa · Content Management</span></div></header>
+  <div class="cms-note" id="cms-loading" role="status"><strong>Opening the parish website editor…</strong><p>If a login screen does not appear, connect this Netlify site to a GitHub repository, then enable Identity and Git Gateway.</p></div>
+  <main class="cms-frame" aria-label="Content management editor"><div id="nc-root"></div></main>
+  <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      window.setTimeout(function () {
+        var loading = document.getElementById('cms-loading');
+        if (loading && document.querySelector('[class*="AppHeader"], [class*="LoginPage"], #nc-root > *')) loading.hidden = true;
+      }, 1200);
+    });
+  </script>
+</body>
+</html>
